@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --kpit-navy: #143E68;
+    --kpit-cerulean: #1F78B4;
+    --kpit-cyan: #2AA7EA;
+    --kpit-ink: #07090E;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #07090E;
+    background-color: #FFFFFF;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .kpit-gradient-bg {
+    background-image: linear-gradient(135deg, #143E68 0%, #1F78B4 52%, #2AA7EA 100%);
+  }
+
+  .kpit-gradient-bg-hover:hover {
+    background-image: linear-gradient(135deg, #0F3154 0%, #186296 52%, #1F91D0 100%);
+  }
+
+  .kpit-gradient-text {
+    background-image: linear-gradient(135deg, #143E68 0%, #1F78B4 50%, #2AA7EA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .kpit-ribbon-border {
+    border-image: linear-gradient(90deg, #143E68 0%, #1F78B4 50%, #2AA7EA 100%) 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
